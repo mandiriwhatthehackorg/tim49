@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="top|center"
+    android:background="#EDF6FF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat datang di"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#67B2E8"
+                app:customFont="fonts/myriadpro-regular.otf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="5dp">
+                <id.wth.celenganmandiri.utils.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="mandiri"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:textColor="#003D79"
+                    app:customFont="fonts/myriadpro-bold.otf"/>
+
+                <id.wth.celenganmandiri.utils.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="reserve"
+                    android:textSize="35sp"
+                    android:textColor="#003D79"
+                    app:customFont="fonts/myriadpro-bold.otf"/>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="-20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logogram">
+            </ImageView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_img">
+            </ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edtKode"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"
+                android:elevation="5dp"
+                android:maxLength="6"
+                android:inputType="textPassword"
+                android:background="@drawable/edt_rounded"
+                android:hint="Masukan kode akses"/>
+
+            <Button
+                android:id="@+id/signinBtn"
+                android:layout_width="240dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:text="Masuk"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/btn_rounded_grey"
+                android:enabled="false"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="bottom|center">
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Buat rekening baru"
+                android:textColor="#003D79"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_rounded_trans" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

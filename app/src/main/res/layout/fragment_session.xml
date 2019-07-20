@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#EDF6FF">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDF6FF"
+        android:clipToPadding="false"
+        android:padding="@dimen/spacing_large"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.kofigyan.stateprogressbar.StateProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:spb_currentStateNumber="one"
+                app:spb_maxStateNumber="three"
+                app:spb_checkStateCompleted="false"
+                app:spb_stateSize="25dp"
+                app:spb_stateBackgroundColor="#B5B7B9"
+                app:spb_currentStateDescriptionColor="#003D79"
+                app:spb_stateDescriptionColor="#003D79"
+                app:spb_stateForegroundColor="#003D79"/>
+
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Buka rekening baru"
+                android:textSize="25sp"
+                android:textColor="#003D79"
+                app:customFont="fonts/myriadpro-bold.otf"/>
+
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="lengkapi data pribadi anda"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#67B2E8"
+                app:customFont="fonts/myriadpro-regular.otf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Nama"/>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/ttgl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Tanggal lahir"/>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/nik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="NIK"/>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Email"/>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:inputType="phone"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Nomor handphone"/>
+
+                <Button
+                    android:id="@+id/nextBtn"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Berikutnya"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:background="@drawable/btn_rounded"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
