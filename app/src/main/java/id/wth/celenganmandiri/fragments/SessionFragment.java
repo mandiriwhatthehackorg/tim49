@@ -147,6 +147,7 @@ public class SessionFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 resendOtp();
+                dialog.dismiss();
             }
         });
 

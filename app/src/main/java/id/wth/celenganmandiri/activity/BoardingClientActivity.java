@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import id.wth.celenganmandiri.R;
 import id.wth.celenganmandiri.fragments.SessionFragment;
+import id.wth.celenganmandiri.fragments.SubmitRekFragment;
 
 public class BoardingClientActivity extends AppCompatActivity {
 
@@ -17,7 +18,7 @@ public class BoardingClientActivity extends AppCompatActivity {
 
         FragmentTransaction transaction = getSupportFragmentManager()
                 .beginTransaction();
-        transaction.replace(R.id.client_content, new SessionFragment());
+        transaction.replace(R.id.client_content, new SubmitRekFragment());
         transaction.commit();
 
     }

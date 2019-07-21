@@ -23,24 +23,11 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.kofigyan.stateprogressbar.StateProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                app:spb_currentStateNumber="three"
-                app:spb_maxStateNumber="three"
-                app:spb_checkStateCompleted="false"
-                app:spb_stateSize="25dp"
-                app:spb_stateBackgroundColor="#B5B7B9"
-                app:spb_currentStateDescriptionColor="#003D79"
-                app:spb_stateDescriptionColor="#003D79"
-                app:spb_stateForegroundColor="#003D79"/>
-
             <id.wth.celenganmandiri.utils.TextViewPlus
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Buka rekening baru"
+                android:text="Akun berhasil dibuat"
                 android:textSize="25sp"
                 android:textColor="#003D79"
                 app:customFont="fonts/myriadpro-bold.otf"/>
@@ -49,8 +36,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="Lengkapi dokumen anda"
-                android:textSize="20sp"
+                android:text="Silahkan pilih simpanan Anda"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#67B2E8"
+                app:customFont="fonts/myriadpro-regular.otf"/>
+
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="untuk keperluan apa?"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#67B2E8"
                 app:customFont="fonts/myriadpro-regular.otf"/>
@@ -61,30 +58,19 @@
                 android:orientation="vertical"
                 android:layout_marginRight="25dp"
                 android:layout_marginLeft="25dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:gravity="center">
-                <android.support.v7.widget.AppCompatEditText
-                    android:id="@+id/edtIbu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:textSize="14sp"
-                    android:textColor="#003D79"
-                    android:elevation="5dp"
-                    android:background="@drawable/background_edit_text"
-                    android:hint="Nama ibu kandung"/>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardKtp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
                     android:layout_gravity="center"
                     app:cardCornerRadius="10dp">
                     <LinearLayout
-                        android:id="@+id/ktpLayout"
+                        android:id="@+id/lyt_pendidikan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/edt_rounded"
                         android:gravity="center"
                         android:orientation="vertical">
                         <com.balysv.materialripple.MaterialRippleLayout
@@ -92,9 +78,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
                             <LinearLayout
-                                android:id="@+id/lyt_ktp"
+                                android:id="@+id/cardPendidikan"
                                 android:layout_width="match_parent"
-                                android:layout_height="70dp"
+                                android:layout_height="85dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:clickable="true"
@@ -106,15 +92,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center">
-
                                     <LinearLayout
-                                        android:id="@+id/layout_ic_ktp"
-                                        android:layout_width="56dp"
-                                        android:layout_height="62dp"
-                                        android:layout_gravity="center"
-                                        android:background="@drawable/btn_rounded_grey"
+                                        android:id="@+id/ic_pendidikan"
                                         android:orientation="vertical"
-                                        android:padding="0dp" />
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:background="@drawable/btn_rounded_grey"
+                                        android:layout_gravity="center"
+                                        android:padding="0dp"/>
                                     <ImageView
                                         android:id="@+id/image"
                                         android:layout_width="50dp"
@@ -122,7 +107,7 @@
                                         android:layout_gravity="center"
                                         android:layout_marginLeft="@dimen/spacing_large"
                                         android:layout_marginRight="@dimen/spacing_large"
-                                        android:src="@drawable/ico_ktp"/>
+                                        android:src="@drawable/ico_book"/>
                                 </FrameLayout>
                                 <View
                                     android:layout_width="@dimen/spacing_medium"
@@ -143,10 +128,30 @@
                                         <id.wth.celenganmandiri.utils.TextViewPlus
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Kartu Identitas (KTP)"
+                                            android:text="Pendidikan"
                                             android:textSize="18sp"
                                             android:textColor="#003D79"
                                             app:customFont="fonts/myriadpro-bold.otf"/>
+
+                                        <id.wth.celenganmandiri.utils.TextViewPlus
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Durasi 10 tahun"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#67B2E8"
+                                            app:customFont="fonts/myriadpro-regular.otf"/>
+                                        <id.wth.celenganmandiri.utils.TextViewPlus
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="1% dari total belanja"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#67B2E8"
+                                            app:customFont="fonts/myriadpro-regular.otf"/>
+
                                     </LinearLayout>
                                 </LinearLayout>
                             </LinearLayout>
@@ -161,6 +166,7 @@
                     android:layout_gravity="center"
                     app:cardCornerRadius="10dp">
                     <LinearLayout
+                        android:id="@+id/lyt_old"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -170,9 +176,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
                             <LinearLayout
-                                android:id="@+id/lyt_selfie"
+                                android:id="@+id/cardOld"
                                 android:layout_width="match_parent"
-                                android:layout_height="70dp"
+                                android:layout_height="85dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:clickable="true"
@@ -185,10 +191,10 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center">
                                     <LinearLayout
-                                        android:id="@+id/layout_ic_selfi"
+                                        android:id="@+id/ic_old"
+                                        android:orientation="vertical"
                                         android:layout_width="60dp"
                                         android:layout_height="60dp"
-                                        android:orientation="vertical"
                                         android:background="@drawable/btn_rounded_grey"
                                         android:layout_gravity="center"
                                         android:padding="0dp"/>
@@ -199,7 +205,7 @@
                                         android:layout_gravity="center"
                                         android:layout_marginLeft="@dimen/spacing_large"
                                         android:layout_marginRight="@dimen/spacing_large"
-                                        android:src="@drawable/ico_selfie"/>
+                                        android:src="@drawable/ico_old"/>
                                 </FrameLayout>
                                 <View
                                     android:layout_width="@dimen/spacing_medium"
@@ -220,10 +226,30 @@
                                         <id.wth.celenganmandiri.utils.TextViewPlus
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Selfie dengan KTP"
+                                            android:text="Tunjangan hari tua"
                                             android:textSize="18sp"
                                             android:textColor="#003D79"
                                             app:customFont="fonts/myriadpro-bold.otf"/>
+
+                                        <id.wth.celenganmandiri.utils.TextViewPlus
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Durasi 20 tahun"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#67B2E8"
+                                            app:customFont="fonts/myriadpro-regular.otf"/>
+                                        <id.wth.celenganmandiri.utils.TextViewPlus
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="1% dari total belanja"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#67B2E8"
+                                            app:customFont="fonts/myriadpro-regular.otf"/>
+
                                     </LinearLayout>
                                 </LinearLayout>
                             </LinearLayout>
@@ -238,6 +264,7 @@
                     android:layout_gravity="center"
                     app:cardCornerRadius="10dp">
                     <LinearLayout
+                        android:id="@+id/lyt_event"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -247,9 +274,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
                             <LinearLayout
-                                android:id="@+id/lyt_ttd"
+                                android:id="@+id/cardEvent"
                                 android:layout_width="match_parent"
-                                android:layout_height="70dp"
+                                android:layout_height="85dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:clickable="true"
@@ -262,9 +289,9 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center">
                                     <LinearLayout
-                                        android:id="@+id/layout_ic_ttd"
-                                        android:layout_width="60dp"
+                                        android:id="@+id/ic_event"
                                         android:orientation="vertical"
+                                        android:layout_width="60dp"
                                         android:layout_height="60dp"
                                         android:background="@drawable/btn_rounded_grey"
                                         android:layout_gravity="center"
@@ -276,7 +303,7 @@
                                         android:layout_gravity="center"
                                         android:layout_marginLeft="@dimen/spacing_large"
                                         android:layout_marginRight="@dimen/spacing_large"
-                                        android:src="@drawable/ico_ttd"/>
+                                        android:src="@drawable/ico_event"/>
                                 </FrameLayout>
                                 <View
                                     android:layout_width="@dimen/spacing_medium"
@@ -297,10 +324,28 @@
                                         <id.wth.celenganmandiri.utils.TextViewPlus
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Foto tanda tangan "
+                                            android:text="Tahunan"
                                             android:textSize="18sp"
                                             android:textColor="#003D79"
                                             app:customFont="fonts/myriadpro-bold.otf"/>
+                                        <id.wth.celenganmandiri.utils.TextViewPlus
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Durasi 1 tahun"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#67B2E8"
+                                            app:customFont="fonts/myriadpro-regular.otf"/>
+                                        <id.wth.celenganmandiri.utils.TextViewPlus
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="1% dari total belanja"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#67B2E8"
+                                            app:customFont="fonts/myriadpro-regular.otf"/>
                                     </LinearLayout>
                                 </LinearLayout>
                             </LinearLayout>
@@ -313,12 +358,12 @@
             <Button
                 android:id="@+id/verivyBtn"
                 android:layout_width="match_parent"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_height="wrap_content"
-                android:text="Berikutnya"
+                android:text="Pilih"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:background="@drawable/btn_rounded"

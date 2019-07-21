@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="top|center"
+    android:background="#EDF6FF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1.5">
+        <ImageView
+            android:id="@+id/topSplashView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/header_pendidika">
+        </ImageView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="top"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Rp. 36,067,000"
+                android:textSize="25sp"
+                android:textColor="#003D79"
+                app:customFont="fonts/myriadpro-bold.otf"/>
+
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Dana terkumpul"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#67B2E8"
+                app:customFont="fonts/myriadpro-regular.otf"/>
+
+
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Tentang celengan"
+                android:textSize="18sp"
+                android:textColor="#003D79"
+                app:customFont="fonts/myriadpro-bold.otf"/>
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Adalah bentuk tabungan deposito yang dana terkumpul dari setiap pembelanjaan akan dibebankan sebesar 1% dari transaksi belanja yang dilakukan oleh nasabah melalui debit di merchant-merchant rekan mandiri."
+                android:textSize="15sp"
+                app:customFont="fonts/myriadpro-regular.otf"/>
+
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Nasabah dapat memilih bentuk celengan yang akan dipakai, untuk celengan pendidikan sendiri memiliki durasi penyimpanan selama 10 tahun."
+                android:textSize="15sp"
+                app:customFont="fonts/myriadpro-regular.otf"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Lihat riwayat"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_rounded" />
+    </RelativeLayout>
+</LinearLayout>

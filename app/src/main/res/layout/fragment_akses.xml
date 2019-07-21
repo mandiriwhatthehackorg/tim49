@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#EDF6FF">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDF6FF"
+        android:clipToPadding="false"
+        android:padding="@dimen/spacing_large"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Buat kode akses dan PIN"
+                android:textSize="25sp"
+                android:textColor="#003D79"
+                app:customFont="fonts/myriadpro-bold.otf"/>
+
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Untuk masuk ke apilkasi tentukan"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#67B2E8"
+                app:customFont="fonts/myriadpro-regular.otf"/>
+            <id.wth.celenganmandiri.utils.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="6 karakter gabungan huruf dan angka"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#67B2E8"
+                app:customFont="fonts/myriadpro-regular.otf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtkode_akses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:maxLength="6"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Masukan kode akses"/>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edtkode_akses_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:maxLength="6"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Ulangi kode akses"/>
+
+                <id.wth.celenganmandiri.utils.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="PIN diperlukan untuk transaksi"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#67B2E8"
+                    android:layout_gravity="center"
+                    app:customFont="fonts/myriadpro-regular.otf"/>
+                <id.wth.celenganmandiri.utils.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:text="yang berupa 6 angka"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#67B2E8"
+                    app:customFont="fonts/myriadpro-regular.otf"/>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Masukan kode PIN"/>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/pin_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:padding="12dp"
+                    android:textSize="14sp"
+                    android:textColor="#003D79"
+                    android:elevation="5dp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Ulangi kode PIN"/>
+
+
+
+                <Button
+                    android:id="@+id/nextBtn"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Selesai"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:background="@drawable/btn_rounded"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

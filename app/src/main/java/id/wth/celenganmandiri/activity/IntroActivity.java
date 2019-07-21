@@ -10,6 +10,8 @@ import com.github.paolorotolo.appintro.AppIntro;
 
 import id.wth.celenganmandiri.R;
 import id.wth.celenganmandiri.fragments.Intro_Slide_1;
+import id.wth.celenganmandiri.fragments.Intro_Slide_2;
+import id.wth.celenganmandiri.fragments.Intro_Slide_3;
 import id.wth.celenganmandiri.utils.PreferenceManager;
 
 public class IntroActivity extends AppIntro {
@@ -26,21 +28,22 @@ public class IntroActivity extends AppIntro {
         // Add your slide fragments here.
         // AppIntro will automatically generate the dots indicator and buttons.
         addSlide(new Intro_Slide_1());
-        addSlide(new Intro_Slide_1());
+        addSlide(new Intro_Slide_2());
+        addSlide(new Intro_Slide_3());
 
 
 
         // Hide StatusBar
         showStatusBar(false);
-        showSkipButton(true);
+        showSkipButton(false);
         setProgressButtonEnabled(true);
 
-        setBarColor(ContextCompat.getColor(IntroActivity.this, R.color.white));
-        setSeparatorColor(ContextCompat.getColor(IntroActivity.this, R.color.colorPrimaryLight));
+        setBarColor(ContextCompat.getColor(IntroActivity.this, R.color.colorPrimaryLight_1));
+        setSeparatorColor(ContextCompat.getColor(IntroActivity.this, R.color.colorPrimaryLight_1));
 
-        setColorDoneText(ContextCompat.getColor(IntroActivity.this, R.color.colorPrimary));
+        setColorDoneText(ContextCompat.getColor(IntroActivity.this, R.color.colorAccent));
         setColorSkipButton(ContextCompat.getColor(IntroActivity.this, R.color.colorPrimary));
-        setNextArrowColor(ContextCompat.getColor(IntroActivity.this, R.color.colorPrimary));
+        setNextArrowColor(ContextCompat.getColor(IntroActivity.this, R.color.colorAccent));
 
         setIndicatorColor(ContextCompat.getColor(IntroActivity.this, R.color.colorPrimary),
                 ContextCompat.getColor(IntroActivity.this, R.color.iconsLight));
@@ -52,7 +55,7 @@ public class IntroActivity extends AppIntro {
         if (preferenceManager.isFirstTimeLaunch()) {
             preferenceManager.setFirstTimeLaunch(false);
             // Do something when users tap on Skip button.
-            startActivity(new Intent(IntroActivity.this, MainActivity.class));
+            startActivity(new Intent(IntroActivity.this, LandingActivity.class));
             finish();
             overridePendingTransition(R.anim.enter_from_right, R.anim.exit_out_right);
         } else {
@@ -66,7 +69,7 @@ public class IntroActivity extends AppIntro {
         super.onDonePressed(currentFragment);
         if (preferenceManager.isFirstTimeLaunch()) {
             preferenceManager.setFirstTimeLaunch(false);
-            startActivity(new Intent(IntroActivity.this, MainActivity.class));
+            startActivity(new Intent(IntroActivity.this, LandingActivity.class));
             finish();
             overridePendingTransition(R.anim.enter_from_right, R.anim.exit_out_right);
         } else {
@@ -86,7 +89,7 @@ public class IntroActivity extends AppIntro {
         if (preferenceManager.isFirstTimeLaunch()) {
             //myAppPrefsManager.setFirstTimeLaunch(false);
             // Navigate to MainActivity
-            startActivity(new Intent(IntroActivity.this, LoginActivity.class));
+            startActivity(new Intent(IntroActivity.this, LandingActivity.class));
             finish();
             overridePendingTransition(R.anim.enter_from_right, R.anim.exit_out_right);
         }

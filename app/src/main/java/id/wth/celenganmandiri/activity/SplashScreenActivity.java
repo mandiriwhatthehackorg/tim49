@@ -19,7 +19,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         preferenceManager = new PreferenceManager(this);
-        preferenceManager.setFirstTimeLaunch(false);
+        preferenceManager.setFirstTimeLaunch(true);
         displaySplashScreen();
     }
 
@@ -39,7 +39,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 }
                 else {
                     // Navigate to MainActivity
-                    startActivity(new Intent(getBaseContext(), LandingActivity.class));
+                    startActivity(new Intent(getBaseContext(), IntroActivity.class));
                     finish();
                 }
             }
