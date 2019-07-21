@@ -18,7 +18,7 @@ public class BoardingClientActivity extends AppCompatActivity {
 
         FragmentTransaction transaction = getSupportFragmentManager()
                 .beginTransaction();
-        transaction.replace(R.id.client_content, new SubmitRekFragment());
+        transaction.replace(R.id.client_content, new SessionFragment());
         transaction.commit();
 
     }
